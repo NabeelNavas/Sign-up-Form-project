@@ -3,130 +3,172 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Odin | Sign Up</title>
+
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
+
 <body>
   <aside class="sidebar" aria-label="Odin">
     <div class="logo-banner">
-      <img src="odin-lined.png" alt="" class="logo">
+      <img
+        src="odin-lined.png"
+        alt=""
+        class="logo"
+      >
       <span class="brand-name">ODIN</span>
     </div>
 
     <p class="photo-credit">
       Photo by
-      <a href="[unsplash.com](https://unsplash.com/@haliewestphoto)">Halie West</a>
+      <a href="[unsplash.com](https://unsplash.com/@haliewestphoto)">
+        Halie West
+      </a>
       on
-      <a href="[unsplash.com](https://unsplash.com/photos/25xggax4bSA)">Unsplash</a>
+      <a href="[unsplash.com](https://unsplash.com/photos/25xggax4bSA)">
+        Unsplash
+      </a>
     </p>
   </aside>
 
   <main class="main-content">
     <header class="introduction">
-      <h1 class="visually-hidden">Create your Odin account</h1>
+      <h1 class="visually-hidden">
+        Create your Odin account
+      </h1>
 
       <p>
-        This is not a real online service! You know you need something
-        like this in your life to help you realize your deepest dreams.
-        Sign up <em>now</em> to get started.
+        This is not a real online service! You know you need
+        something like this in your life to help you realize
+        your deepest dreams. Sign up <em>now</em> to get started.
       </p>
 
       <p>You <em>know</em> you want to.</p>
     </header>
 
-    <!-- A real service would supply an account-creation endpoint. -->
-    <form action="#" method="post">
-      <section class="form-panel" aria-labelledby="form-heading">
-        <h2 id="form-heading">Let's do this!</h2>
-        <p class="required-note">All fields are required.</p>
+    <!--
+      The fieldset starts disabled to prevent submission if the
+      demo script fails to load. The script enables it after
+      installing the submission handler.
+    -->
+    <form id="signup-form" action="#" method="post">
+      <fieldset id="signup-fields" disabled>
+        <legend class="visually-hidden">
+          Account details
+        </legend>
 
-        <div class="form-fields">
-          <div class="field">
-            <label for="first-name">First name</label>
-            <input
-              type="text"
-              id="first-name"
-              name="first_name"
-              autocomplete="given-name"
-              required
-            >
-          </div>
+        <section
+          class="form-panel"
+          aria-labelledby="form-heading"
+        >
+          <h2 id="form-heading">Let's do this!</h2>
 
-          <div class="field">
-            <label for="last-name">Last name</label>
-            <input
-              type="text"
-              id="last-name"
-              name="last_name"
-              autocomplete="family-name"
-              required
-            >
-          </div>
+          <p class="required-note">
+            All fields are required.
+          </p>
 
-          <div class="field">
-            <label for="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              autocomplete="email"
-              required
-            >
-          </div>
+          <div class="form-fields">
+            <div class="field">
+              <label for="first-name">First name</label>
+              <input
+                type="text"
+                id="first-name"
+                name="first_name"
+                autocomplete="given-name"
+                required
+              >
+            </div>
 
-          <div class="field">
-            <label for="phone">Phone number</label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              autocomplete="tel"
-              required
-            >
-          </div>
+            <div class="field">
+              <label for="last-name">Last name</label>
+              <input
+                type="text"
+                id="last-name"
+                name="last_name"
+                autocomplete="family-name"
+                required
+              >
+            </div>
 
-          <div class="field">
-            <label for="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              autocomplete="new-password"
-              minlength="8"
-              aria-describedby="password-help"
-              required
-            >
-            <small id="password-help">Use at least 8 characters.</small>
-          </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                required
+              >
+            </div>
 
-          <div class="field">
-            <label for="confirm-password">Confirm password</label>
-            <input
-              type="password"
-              id="confirm-password"
-              name="confirm_password"
-              autocomplete="new-password"
-              minlength="8"
-              aria-describedby="confirm-password-help"
-              required
-            >
-            <small id="confirm-password-help">
-              Re-enter your password, at least 8 characters.
-            </small>
+            <div class="field">
+              <label for="phone">Phone number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                autocomplete="tel"
+                required
+              >
+            </div>
+
+            <div class="field">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                autocomplete="new-password"
+                minlength="8"
+                aria-describedby="password-help"
+                required
+              >
+              <small id="password-help">
+                Use at least 8 characters.
+              </small>
+            </div>
+
+            <div class="field">
+              <label for="confirm-password">
+                Confirm password
+              </label>
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirm_password"
+                autocomplete="new-password"
+                minlength="8"
+                aria-describedby="confirm-password-help"
+                required
+              >
+              <small id="confirm-password-help">
+                Re-enter your password, at least 8 characters.
+              </small>
+            </div>
           </div>
+        </section>
+
+        <div class="form-actions">
+          <button type="submit">Create Account</button>
+
+          <p id="form-message" role="status"></p>
+
+          <p class="login-note">
+            Already have an account?
+            <a href="#" id="login-link">Log in</a>
+          </p>
         </div>
-      </section>
-
-      <div class="form-actions">
-        <button type="submit">Create Account</button>
-
-        <p>
-          Already have an account?
-          <a href="#">Log in</a>
-        </p>
-      </div>
+      </fieldset>
     </form>
+
+    <noscript>
+      <p class="noscript-message">
+        Enable JavaScript to test this demo form.
+        No account will be created.
+      </p>
+    </noscript>
   </main>
 </body>
 </html>
-
