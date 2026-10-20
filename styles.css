@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Norse";
-  src: url("assets/Norse-Bold.otf") format("opentype");
+ src: url("Norse-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -37,7 +37,7 @@ body {
   flex: 0 0 36%;
   min-height: 100vh;
   background-color: #253721;
-  background-image: url("assets/ferns.jpg");
+  background-image: url("ferns.jpg");
   background-position: center;
   background-size: cover;
 }
